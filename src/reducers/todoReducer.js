@@ -3,6 +3,9 @@ import {
   SET_LOADING,
   ADD_TODO,
   DELETE_TODO,
+  SET_CURRENT,
+  CLEAR_CURRENT,
+  UPDATE_TODO,
 } from '../actions/types';
 
 const initialState = {
@@ -31,6 +34,26 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         todos: state.todos.filter((todo) => todo.id !== payload),
         loading: false,
+      };
+    case UPDATE_TODO:
+      return {
+        ...state,
+        todos: state.todos.map((todo) =>
+          todo.id === payload.id ? payload : todo
+        ),
+        loading: false,
+      };
+
+    case SET_CURRENT:
+      return {
+        ...state,
+        current: payload,
+      };
+
+    case CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null,
       };
 
     case SET_LOADING:

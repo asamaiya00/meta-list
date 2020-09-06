@@ -4,33 +4,41 @@
       "id": 1,
       "name": "Buy groceries",
       "content": "milk, bread, butter",
-      "completed": false,
       "comments": "from departmental store",
-      "date": "2019-05-31T15:46:10.179Z"
+      "completed": false,
+      "date": "2020-09-06T17:20:09.707Z"
     },
     {
       "id": 2,
       "name": "Get haircut",
       "content": "It has been ages",
-      "completed": false,
+      "completed": true,
       "comments": "",
       "date": "2019-05-31T15:46:10.179Z"
     },
     {
       "id": 3,
       "name": "Visit friend",
-      "content": "",
+      "content": "In delhi",
+      "comments": "call him",
       "completed": false,
-      "comments": "",
-      "date": "2019-05-31T15:46:10.179Z"
+      "date": "2020-09-06T17:08:57.078Z"
     },
     {
-      "name": " Pay rent",
-      "content": "",
+      "id": 4,
+      "name": "Pay rent",
+      "content": "10000",
+      "comments": "cash only",
+      "completed": false,
+      "date": "2020-09-06T17:07:22.056Z"
+    },
+    {
+      "id": 5,
+      "name": "trim beard",
+      "content": "will do it tomorrow",
       "comments": "",
       "completed": false,
-      "date": "2020-09-06T11:20:04.389Z",
-      "id": 4
+      "date": "2020-09-06T17:08:05.121Z"
     }
   ]
 }

@@ -4,6 +4,8 @@ import {
   GET_TODOS,
   UPDATE_TODO,
   SET_LOADING,
+  SET_CURRENT,
+  CLEAR_CURRENT,
 } from './types';
 
 export const getTodos = () => async (dispatch) => {
@@ -11,7 +13,6 @@ export const getTodos = () => async (dispatch) => {
     setLoading();
     const res = await fetch('http://localhost:5000/todos');
     const data = await res.json();
-    console.log(dispatch);
     dispatch({
       type: GET_TODOS,
       payload: data,
@@ -26,7 +27,6 @@ export const deleteTodo = (id) => async (dispatch) => {
     await fetch(`http://localhost:5000/todos/${id}`, {
       method: 'DELETE',
     });
-    console.log(dispatch)
     dispatch({
       type: DELETE_TODO,
       payload: id,
@@ -54,7 +54,6 @@ export const addTodo = (name) => async (dispatch) => {
       },
     });
     const data = await res.json();
-    console.log(data);
     dispatch({
       type: ADD_TODO,
       payload: data,
@@ -62,6 +61,40 @@ export const addTodo = (name) => async (dispatch) => {
   } catch (error) {
     console.log(error);
   }
+};
+
+export const updateTodo = (todo) => async (dispatch) => {
+  try {
+    setLoading();
+    const res = await fetch(`http://localhost:5000/todos/${todo.id}`, {
+      method: 'PUT',
+      body: JSON.stringify(todo),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const data = await res.json();
+    console.log(data);
+    dispatch({
+      type: UPDATE_TODO,
+      payload: data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const setCurrent = (todo) => {
+  return {
+    type: SET_CURRENT,
+    payload: todo,
+  };
+};
+
+export const clearCurrent = () => {
+  return {
+    type: CLEAR_CURRENT,
+  };
 };
 
 export const setLoading = () => {

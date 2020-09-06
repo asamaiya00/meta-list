@@ -1,17 +1,15 @@
 import React from 'react';
-import M from 'materialize-css/dist/js/materialize.min.js';
-import { deleteTodo } from '../../actions/todoActions';
+import { deleteTodo, setCurrent } from '../../actions/todoActions';
 import { connect } from 'react-redux';
 
-const TodoItem = ({ todo, deleteTodo } ) => {
- 
+const TodoItem = ({ todo, deleteTodo, setCurrent }) => {
   return (
     <li className="collection-item">
       <div>
-        <a
+        <a 
           href="#!"
-          className={`${todo.completed ? 'green-text' : 'blue-text'} `}
-          //   onClick={() => setCurrent(log)}
+          className={`${todo.completed ? 'green-text' : 'orange-text'} `}
+          onClick={() => setCurrent(todo)}
         >
           {todo.name}
         </a>
@@ -27,4 +25,4 @@ const TodoItem = ({ todo, deleteTodo } ) => {
   );
 };
 
-export default connect(null, { deleteTodo })(TodoItem);
+export default connect(null, { deleteTodo, setCurrent })(TodoItem);
