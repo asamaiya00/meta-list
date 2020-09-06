@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "Buy groceries",
+      "content": "milk, bread, butter",
+      "completed": false,
+      "comments": "from departmental store",
+      "date": "2019-05-31T15:46:10.179Z"
+    },
+    {
+      "id": 2,
+      "name": "Get haircut",
+      "content": "It has been ages",
+      "completed": false,
+      "comments": "",
+      "date": "2019-05-31T15:46:10.179Z"
+    },
+    {
+      "id": 3,
+      "name": "Visit friend",
+      "content": "",
+      "completed": false,
+      "comments": "",
+      "date": "2019-05-31T15:46:10.179Z"
+    }
+  ]
+}
