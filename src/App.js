@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import TodoList from './components/todos/TodoList';
 import TodoForm from './components/layout/TodoForm';
+import AddTodo from './components/todos/AddTodo';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="container row">
         <h1>Items</h1>
         <div className="col l6">
+        <AddTodo/>
           <TodoList />
         </div>
         <div className="col l6">

@@ -33,6 +33,7 @@ const TodoForm = () => {
           value={completed}
           onChange={(e) => setCompleted(!completed)}
         />
+        
         <span>Completed</span>
       </label>
     </form>
