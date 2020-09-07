@@ -7,7 +7,7 @@ const TodoForm = ({ todo: { todos, current }, updateTodo,clearCurrent }) => {
   const [completed, setCompleted] = useState(false);
   const [comments, setComments] = useState('');
 
-  useEffect(() => {
+  useEffect(() => { 
     if (current) {
       setContent(current.content);
       setCompleted(current.completed);

@@ -6,15 +6,15 @@
       "content": "milk, bread, butter",
       "comments": "from departmental store",
       "completed": false,
-      "date": "2020-09-06T17:20:09.707Z"
+      "date": "2020-09-07T07:02:01.685Z"
     },
     {
       "id": 2,
       "name": "Get haircut",
       "content": "It has been ages",
-      "completed": true,
       "comments": "",
-      "date": "2019-05-31T15:46:10.179Z"
+      "completed": true,
+      "date": "2020-09-07T07:25:20.237Z"
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
       "content": "will do it tomorrow",
       "comments": "",
       "completed": false,
-      "date": "2020-09-06T17:08:05.121Z"
+      "date": "2020-09-07T07:25:26.605Z"
     }
   ]
 }

@@ -10,12 +10,12 @@ function App() {
   return (
     <Provider store={store}>
       <div className="row">
-        <div className="col l2"></div>
-        <div className="col l6">
+        <div className="col l2 m2"></div>
+        <div className="col l6 m6">
           <AddTodo />
           <TodoList />
         </div>
-        <div className="col l4">
+        <div className="col l4 m4">
           <TodoForm />
         </div>
       </div>

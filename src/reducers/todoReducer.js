@@ -23,7 +23,7 @@ export default (state = initialState, { type, payload }) => {
         todos: payload,
         loading: false,
       };
-    case ADD_TODO:
+    case ADD_TODO: 
       return {
         ...state,
         todos: [...state.todos, payload],
