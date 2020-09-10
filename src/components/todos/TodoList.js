@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react';
 import TodoItem from './TodoItem';
 import { connect } from 'react-redux';
-import { getTodos } from '../../actions/todoActions';
+import { getTodos, clearCurrent } from '../../actions/todoActions';
 import Preloader from '../layout/Preloader';
 
-const TodoList = ({ todo: { todos, loading }, getTodos, list }) => {
+const TodoList = ({
+  todo: { todos, loading },
+  getTodos,
+  list,
+  clearCurrent,
+}) => {
   useEffect(() => {
+    clearCurrent();
     getTodos(list);
     // eslint-disable-next-line
   }, [list]);
@@ -19,7 +25,9 @@ const TodoList = ({ todo: { todos, loading }, getTodos, list }) => {
         {!loading && todos.length === 0 ? (
           <p className="center">No items to show...</p>
         ) : (
-          todos.map((todo) => <TodoItem todo={todo} key={todo.id} />)
+          todos.map((todo) => (
+            <TodoItem todo={todo} key={todo.id} list={list} />
+          ))
         )}
       </ul>
     </div>
@@ -30,4 +38,4 @@ const mapStateToProps = (state) => ({
   todo: state.todo,
 });
 
-export default connect(mapStateToProps, { getTodos })(TodoList);
+export default connect(mapStateToProps, { getTodos, clearCurrent })(TodoList);

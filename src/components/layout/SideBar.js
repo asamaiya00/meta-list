@@ -6,14 +6,16 @@ import Main from './Main';
 const SideBar = () => {
   return (
     <Fragment>
-      <ul>
-        <li>
-          <Link to="/Todos">Todos</Link>
-        </li>
-        <li>
-          <Link to="/Books">Books</Link>
-        </li>
-      </ul>
+      <div className="col l2 m2">
+        <ul>
+          <li>
+            <Link to="/Todos">Todos</Link>
+          </li>
+          <li>
+            <Link to="/Books">Books</Link>
+          </li>
+        </ul>
+      </div>
       <Switch>
         <Route exact path="/:list" component={Main} />
       </Switch>

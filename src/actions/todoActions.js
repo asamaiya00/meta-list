@@ -21,10 +21,10 @@ export const getTodos = (list) => async (dispatch) => {
     console.log(error);
   }
 };
-export const deleteTodo = (id) => async (dispatch) => {
+export const deleteTodo = (list, id) => async (dispatch) => {
   try {
     setLoading();
-    await fetch(`http://localhost:5000/todos/${id}`, {
+    await fetch(`http://localhost:5000/${list}/${id}`, {
       method: 'DELETE',
     });
     dispatch({
@@ -36,7 +36,7 @@ export const deleteTodo = (id) => async (dispatch) => {
   }
 };
 
-export const addTodo = (name) => async (dispatch) => {
+export const addTodo = (list, name) => async (dispatch) => {
   try {
     setLoading();
     const todo = {
@@ -46,7 +46,7 @@ export const addTodo = (name) => async (dispatch) => {
       completed: false,
       date: new Date(),
     };
-    const res = await fetch('http://localhost:5000/todos', {
+    const res = await fetch(`http://localhost:5000/${list}`, {
       method: 'POST',
       body: JSON.stringify(todo),
       headers: {
@@ -63,10 +63,10 @@ export const addTodo = (name) => async (dispatch) => {
   }
 };
 
-export const updateTodo = (todo) => async (dispatch) => {
+export const updateTodo = (list, todo) => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch(`http://localhost:5000/todos/${todo.id}`, {
+    const res = await fetch(`http://localhost:5000/${list}/${todo.id}`, {
       method: 'PUT',
       body: JSON.stringify(todo),
       headers: {
@@ -83,10 +83,10 @@ export const updateTodo = (todo) => async (dispatch) => {
   }
 };
 
-export const setCurrent = (todo) => {
+export const setCurrent = (item) => {
   return {
     type: SET_CURRENT,
-    payload: todo,
+    payload:  item,
   };
 };
 

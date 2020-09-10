@@ -1,32 +1,4 @@
 {
-  "links": [
-    {
-      "id": 1,
-      "name": "todos",
-      "todos": [
-        {
-          "id": 1,
-          "name": "Buy groceries",
-          "content": "milk, bread, butter",
-          "comments": "from departmental store",
-          "completed": false,
-          "date": "2020-09-10T04:37:29.043Z"
-        },
-        {
-          "id": 2,
-          "name": "Get haircut",
-          "content": "It has been ages",
-          "comments": "",
-          "completed": true,
-          "date": "2020-09-07T07:25:20.237Z"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "books"
-    }
-  ],
   "todos": [
     {
       "id": 1,
@@ -34,7 +6,7 @@
       "content": "milk, bread, butter",
       "comments": "from departmental store",
       "completed": false,
-      "date": "2020-09-10T04:37:29.043Z"
+      "date": "2020-09-10T09:39:44.236Z"
     },
     {
       "id": 2,
@@ -48,9 +20,9 @@
       "id": 3,
       "name": "Visit friend",
       "content": "In delhi",
-      "comments": "call him",
+      "comments": "call him now",
       "completed": false,
-      "date": "2020-09-06T17:08:57.078Z"
+      "date": "2020-09-10T09:39:46.140Z"
     },
     {
       "id": 4,
@@ -59,6 +31,14 @@
       "comments": "cash only",
       "completed": false,
       "date": "2020-09-06T17:07:22.056Z"
+    },
+    {
+      "id": 5,
+      "name": "Recharge mobile",
+      "content": "Rs. 399",
+      "comments": "",
+      "completed": true,
+      "date": "2020-09-10T09:26:59.253Z"
     }
   ],
   "books": [
@@ -72,11 +52,19 @@
     },
     {
       "id": 2,
-      "name": "Harry Potter 2",
-      "content": "J.K. Rowling 2 ",
-      "comments": "yet to read",
+      "name": "Harry Potter and the Chamber of Secrets",
+      "content": "J. K. Rowling",
+      "comments": "yet to start",
+      "completed": false,
+      "date": "2020-09-10T09:37:09.323Z"
+    },
+    {
+      "id": 3,
+      "name": "The Kite runner ",
+      "content": "khaled hosseini",
+      "comments": "it was a good book",
       "completed": true,
-      "date": "2020-09-07T07:25:20.237Z"
+      "date": "2020-09-10T09:38:32.140Z"
     }
   ]
 }

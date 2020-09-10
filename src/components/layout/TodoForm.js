@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { updateTodo, clearCurrent } from '../../actions/todoActions';
 
-const TodoForm = ({ todo: { todos, current }, updateTodo,clearCurrent }) => {
+const TodoForm = ({ todo: { current }, updateTodo, clearCurrent, list }) => {
   const [content, setContent] = useState('');
   const [completed, setCompleted] = useState(false);
   const [comments, setComments] = useState('');
 
-  useEffect(() => { 
+  useEffect(() => {
     if (current) {
       setContent(current.content);
       setCompleted(current.completed);
@@ -18,13 +18,13 @@ const TodoForm = ({ todo: { todos, current }, updateTodo,clearCurrent }) => {
   const onClick = () => {
     const updated = {
       id: current.id,
-      name:current.name,
+      name: current.name,
       content,
       comments,
       completed,
       date: new Date(),
     };
-    updateTodo(updated);
+    updateTodo(list, updated);
     clearCurrent();
   };
   if (!current) return <h3 className="center">Click on Item</h3>;
@@ -77,4 +77,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { updateTodo,clearCurrent })(TodoForm);
+export default connect(mapStateToProps, { updateTodo, clearCurrent })(TodoForm);

@@ -4,13 +4,13 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import { addTodo } from '../../actions/todoActions';
 import { connect } from 'react-redux';
 
-const AddTodo = ({ addTodo }) => {
+const AddTodo = ({ addTodo, list }) => {
   const [name, setName] = useState('');
   const onSubmit = (e) => {
     if (name.trim() === '' && e.keyCode === 13) {
       M.toast({ html: 'Enter todo name' });
     } else if (e.keyCode === 13) {
-      addTodo(name);
+      addTodo(list, name);
       setName('');
     }
   };
