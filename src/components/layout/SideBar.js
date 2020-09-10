@@ -7,12 +7,16 @@ const SideBar = () => {
   return (
     <Fragment>
       <div className="col l2 m2">
-        <ul>
+        <ul style={{ textAlign: 'center' }}>
           <li>
-            <Link to="/Todos">Todos</Link>
+            <Link to="/Todos">  
+              <h4>Todos</h4>
+            </Link>
           </li>
           <li>
-            <Link to="/Books">Books</Link>
+            <Link to="/Books">
+              <h4>Books</h4>
+            </Link>
           </li>
         </ul>
       </div>

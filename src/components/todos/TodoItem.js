@@ -6,7 +6,7 @@ import {
 } from '../../actions/todoActions';
 import { connect } from 'react-redux';
 
-const TodoItem = ({ todo, deleteTodo, setCurrent, clearCurrent,list }) => {
+const TodoItem = ({ todo, deleteTodo, setCurrent, clearCurrent, list }) => {
   const deleteItem = () => {
     deleteTodo(list, todo.id);
     clearCurrent();
@@ -14,12 +14,19 @@ const TodoItem = ({ todo, deleteTodo, setCurrent, clearCurrent,list }) => {
   return (
     <li className="collection-item">
       <div>
+        <i
+          className={`material-icons ${
+            todo.completed ? 'green-text' : 'white-text'
+          }  `}
+        >
+          check
+        </i>
         <a
           href="#!"
           className={`${todo.completed ? 'green-text' : 'orange-text'} `}
           onClick={() => setCurrent(todo)}
         >
-          {todo.name}
+          {" "+todo.name}
         </a>
         <a href="#!" onClick={deleteItem} className="secondary-content">
           <i className="material-icons grey-text">delete</i>

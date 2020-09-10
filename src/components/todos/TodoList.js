@@ -9,7 +9,7 @@ const TodoList = ({
   getTodos,
   list,
   clearCurrent,
-}) => {
+}) => { 
   useEffect(() => {
     clearCurrent();
     getTodos(list);
