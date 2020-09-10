@@ -74,7 +74,6 @@ export const updateTodo = (todo) => async (dispatch) => {
       },
     });
     const data = await res.json();
-    console.log(data);
     dispatch({
       type: UPDATE_TODO,
       payload: data,

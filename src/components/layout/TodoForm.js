@@ -27,10 +27,10 @@ const TodoForm = ({ todo: { todos, current }, updateTodo,clearCurrent }) => {
     updateTodo(updated);
     clearCurrent();
   };
-  if (!current) return <h3 className="center">Click on task</h3>;
+  if (!current) return <h3 className="center">Click on Item</h3>;
   return (
     <form>
-      <h3 className="center">Task Detail</h3>
+      <h3 className="center">Item Detail</h3>
       <h6 className="center">Content</h6>
 
       <input

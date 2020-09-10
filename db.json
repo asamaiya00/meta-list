@@ -1,4 +1,56 @@
 {
+  "links": [
+    {
+      "id": 1,
+      "name": "todos",
+      "todos": [
+        {
+          "id": 1,
+          "name": "Buy groceries",
+          "content": "milk, bread, butter",
+          "comments": "from departmental store",
+          "completed": false,
+          "date": "2020-09-10T04:37:29.043Z"
+        },
+        {
+          "id": 2,
+          "name": "Get haircut",
+          "content": "It has been ages",
+          "comments": "",
+          "completed": true,
+          "date": "2020-09-07T07:25:20.237Z"
+        },
+        {
+          "id": 3,
+          "name": "Visit friend",
+          "content": "In delhi",
+          "comments": "call him",
+          "completed": false,
+          "date": "2020-09-06T17:08:57.078Z"
+        },
+        {
+          "id": 4,
+          "name": "Pay rent",
+          "content": "10000",
+          "comments": "cash only",
+          "completed": false,
+          "date": "2020-09-06T17:07:22.056Z"
+        },
+        {
+          "id": 5,
+          "name": "trim beard",
+          "content": "will do it tomorrow",
+          "comments": "",
+          "completed": false,
+          "date": "2020-09-07T07:25:26.605Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "books"
+    }
+  ],
   "todos": [
     {
       "id": 1,
@@ -6,12 +58,54 @@
       "content": "milk, bread, butter",
       "comments": "from departmental store",
       "completed": false,
-      "date": "2020-09-07T07:02:01.685Z"
+      "date": "2020-09-10T04:37:29.043Z"
     },
     {
       "id": 2,
       "name": "Get haircut",
       "content": "It has been ages",
+      "comments": "",
+      "completed": true,
+      "date": "2020-09-07T07:25:20.237Z"
+    },
+    {
+      "id": 3,
+      "name": "Visit friend",
+      "content": "In delhi",
+      "comments": "call him",
+      "completed": false,
+      "date": "2020-09-06T17:08:57.078Z"
+    },
+    {
+      "id": 4,
+      "name": "Pay rent",
+      "content": "10000",
+      "comments": "cash only",
+      "completed": false,
+      "date": "2020-09-06T17:07:22.056Z"
+    },
+    {
+      "id": 5,
+      "name": "trim beard",
+      "content": "will do it tomorrow",
+      "comments": "",
+      "completed": false,
+      "date": "2020-09-07T07:25:26.605Z"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Harry Potter 1",
+      "content": "J.K. Rowling",
+      "comments": "",
+      "completed": false,
+      "date": "2020-09-10T04:37:29.043Z"
+    },
+    {
+      "id": 2,
+      "name": "Harry Potter 2",
+      "content": "J.K. Rowling 2 ",
       "comments": "",
       "completed": true,
       "date": "2020-09-07T07:25:20.237Z"
