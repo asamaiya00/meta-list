@@ -1,24 +1,23 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
-import Profile from './Profile';
 
 import Main from './Main';
 
 const SideBar = () => {
   return (
-    <>
+    <Fragment>
       <ul>
         <li>
-          <Link to="/todos">Todos</Link>
+          <Link to="/Todos">Todos</Link>
         </li>
         <li>
-          <Link to="/books">Books</Link>
+          <Link to="/Books">Books</Link>
         </li>
       </ul>
       <Switch>
-        <Route exact path="/:id" component={Main} />
+        <Route exact path="/:list" component={Main} />
       </Switch>
-    </>
+    </Fragment>
   );
 };
 

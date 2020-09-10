@@ -8,10 +8,10 @@ import {
   CLEAR_CURRENT,
 } from './types';
 
-export const getTodos = () => async (dispatch) => {
+export const getTodos = (list) => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch('http://localhost:5000/todos');
+    const res = await fetch(`http://localhost:5000/${list}`);
     const data = await res.json();
     dispatch({
       type: GET_TODOS,
